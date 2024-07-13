@@ -9,17 +9,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body{
-margin: 0;
+html,
+body {
+  margin: 0;
 }
 
-header{
+main,
+header,
+footer {
+  padding: 8px;
+}
+
+header {
   border-bottom: 1px solid darkgray;
   background-color: #eee;
 }
 
-footer{
-border-top: 1px solid darkgray;
-display: flex;
-flex-direction: column;
+footer {
+  border-top: 1px solid darkgray;
+  display: flex;
+  flex-direction: column;
 }

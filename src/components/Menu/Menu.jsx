@@ -5,8 +5,8 @@ function Menu({ menuItems }) {
   return (
     <nav>
       <MenuList>
-        {menuItems.map(({ id, title, href, icon }) => (
-          <MenuItem key={id} href={href} icon={icon}>
+        {menuItems.map(({ id, title, ...props }) => (
+          <MenuItem key={id} {...props}>
             {title}
           </MenuItem>
         ))}

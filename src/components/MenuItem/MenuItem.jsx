@@ -1,7 +1,7 @@
 import { MenuLink } from "./MemuItem.styled";
 
 function MenuItem({ href, icon, children }) {
-  const iconSrc = `/public/icons/${icon}.svg`;
+  const iconSrc = `/icons/${icon}.svg`;
   return (
     <li>
       <MenuLink href={href}>

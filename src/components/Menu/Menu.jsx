@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import { MenuList } from "./Menu.styled";
+import MenuLinksContext from "../../context";
 
-function Menu({ menuItems }) {
+function Menu() {
+  const links = useContext(MenuLinksContext);
   return (
     <nav>
       <MenuList>
-        {menuItems.map(({ id, title, ...props }) => (
+        {links.map(({ id, title, ...props }) => (
           <MenuItem key={id} {...props}>
             {title}
           </MenuItem>

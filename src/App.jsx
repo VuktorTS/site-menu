@@ -1,17 +1,12 @@
 import Menu from "./components/Menu/Menu";
-
-const menuItems = [
-  { id: 1, title: "Home", href: "/", icon: "home" },
-  { id: 2, title: "Services", href: "/services", icon: "services" },
-  { id: 3, title: "Pricing", href: "/pricing", icon: "pricing" },
-  { id: 4, title: "Blog", href: "/blog", icon: "blog" },
-];
+import { menuLinks } from "./constants/menuLink";
+import MenuLinksContext from "./context";
 
 function App() {
   return (
-    <>
+    <MenuLinksContext.Provider value={menuLinks}>
       <header>
-        <Menu menuItems={menuItems} />
+        <Menu />
       </header>
       <main>
         <h1>Welcome to this website</h1>
@@ -21,7 +16,7 @@ function App() {
         <a href="/contact">Contact</a>
         <a href="//reactquickly.dev">React Quickly 2E</a>
       </footer>
-    </>
+    </MenuLinksContext.Provider>
   );
 }
 

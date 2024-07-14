@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useDate } from "../../context";
 import MenuItem from "../MenuItem/MenuItem";
 import { MenuList } from "./Menu.styled";
-import MenuLinksContext from "../../context";
 
 function Menu() {
-  const links = useContext(MenuLinksContext);
+  const { links } = useDate();
+
   return (
     <nav>
       <MenuList>
